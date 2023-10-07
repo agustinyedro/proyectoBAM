@@ -98,7 +98,6 @@ nav ul li:last-child {
 
 .titulo {
     margin-bottom: 10px;
-    /* Espacio entre el título y el párrafo */
 }
 
 .formulario {
@@ -110,26 +109,20 @@ nav ul li:last-child {
 footer {
     display: flex;
     flex-direction: column;
-    /* Coloca los elementos en una columna */
     align-items: center;
     text-align: center;
-    /* Opcional: para centrar el texto horizontalmente */
 }
 
 .redes-sociales {
     display: flex;
-    /* Coloca las imágenes en una fila */
     justify-content: center;
-    /* Centra las imágenes horizontalmente */
     align-items: center;
 }
 
 .redes-sociales a {
     margin: 5px;
-    /* Espacio entre las imágenes */
 }
 
 .tituloFotter {
     margin: 5px;
-    /* Espacio entre el texto y las imágenes */
 }
