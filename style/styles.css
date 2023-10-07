@@ -4,46 +4,60 @@ font-family: 'Quicksand', sans-serif;
 font-family: 'Young Serif', serif;*/
 
 * {
-    /* width: 0;
-    height: 0; */
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: rgb(240, 255, 128);
+    
 }
 
 header {
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: rgba(0, 0, 0, 0);
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: #000;
-    display: flex; 
-    align-items: center; 
+    
+
 }
 
 nav ul {
+
     list-style-type: none;
-    margin: 0; 
-    padding: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin-right: 20px; 
+
+    margin-right: 20px;
+    padding: 20px;
     display: inline-block;
 }
 
 nav ul li:last-child {
-    margin-right: 0; 
+    margin-right: 20px;
 }
+
 .opciones {
+
     text-decoration: none;
     font-size: 16px;
     color: white;
@@ -54,4 +68,68 @@ nav ul li:last-child {
 .logo {
     width: 50px;
     height: 50px;
+}
+
+.carrusel {
+    background-image: url('/img/foto1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    
+}
+
+.contenido {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.titulo {
+    margin-bottom: 10px;
+    /* Espacio entre el título y el párrafo */
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    /* Coloca los elementos en una columna */
+    align-items: center;
+    text-align: center;
+    /* Opcional: para centrar el texto horizontalmente */
+}
+
+.redes-sociales {
+    display: flex;
+    /* Coloca las imágenes en una fila */
+    justify-content: center;
+    /* Centra las imágenes horizontalmente */
+    align-items: center;
+}
+
+.redes-sociales a {
+    margin: 5px;
+    /* Espacio entre las imágenes */
+}
+
+.tituloFotter {
+    margin: 5px;
+    /* Espacio entre el texto y las imágenes */
 }
