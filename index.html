@@ -39,16 +39,20 @@
     <!--Formulario de contacto-->
     <div class="formulario">
       <form action="">
-        <fieldset>
-          <legend>Datos de contacto</legend>
-          <label for="nombre">Nombre: </label>
+        <div class="campo-formulario">
+          <label class="etiquetasFormulario" for="nombre">Nombre:</label>
           <input type="text" name="nombre" id="nombre" />
-          <label for="apellido">Apellido: </label>
+      </div>
+      <div class="campo-formulario">
+          <label class="etiquetasFormulario" for="apellido">Apellido:</label>
           <input type="text" name="apellido" id="apellido" />
-          <label for="telefono">Telefono: </label>
+      </div>
+      <div class="campo-formulario">
+          <label class="etiquetasFormulario" for="telefono">Teléfono:</label>
           <input type="number" name="telefono" id="telefono" />
-        </fieldset>
+      </div>
       </form>
+      <button class="BtnFormulario">enviar</button>
     </div>
 
     <!--Pie de pagina-->
