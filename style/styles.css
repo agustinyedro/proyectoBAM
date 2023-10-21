@@ -1,6 +1,7 @@
 /*font-family: 'Montserrat', sans-serif;
 font-family: 'Oswald', sans-serif;
 font-family: 'Quicksand', sans-serif;
+font-family: 'Urbanist', sans-serif;
 font-family: 'Young Serif', serif;*/
 
 * {
@@ -88,13 +89,14 @@ nav ul li:last-child {
 .contenido {
     margin-right: 20px;
     position: absolute;
+    text-align: center;
     /* display: flex;
     justify-content: center;
     flex-direction: column; */
     /* align-items: center; */
     top: 70%;
     left: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(192, 37, 5, 0.2);
     padding: 20px;
     border-radius: 10px;
     z-index: 2;
@@ -102,11 +104,16 @@ nav ul li:last-child {
 
 .titulo {
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color:#FFFFFF;
+}
+.card{
+    margin: 10px 38% 10px;
 }
 
-.fotoDetallada {
-    height: 360px;
-    margin:10px 30px;
+/* .fotoDetallada {
+    height: 200px;
+    margin:50px 30px 10px;
     padding: 5%;
     background-color: #337141;
     border-radius: 20px;
@@ -128,7 +135,7 @@ nav ul li:last-child {
 
 h2 {
     font-family: 'Young Serif', serif;
-}
+} */
 
 .formulario {
     background-color: #F3D424;
@@ -151,13 +158,10 @@ h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.BtnFormulario {
-    margin-left: auto;
-    background-color: #337141;
-    border-radius: 20px;
+.btn-outline-success {
+    width:250px;
     padding: 5px;
-
-}
+} 
 
 footer {
     display: flex;
