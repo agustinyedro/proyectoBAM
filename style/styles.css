@@ -13,7 +13,8 @@ body {
     background-color: rgb(240, 255, 128);
 
 }
-
+/* Estos fueron algunos de los cambios en la nav para poder hacerlo reponsive 
+y que funciones la burger al achicarse */
 .main-header {
     height: 50px;
     display: flex;
@@ -110,7 +111,7 @@ body {
   }
   
   .button-menu.close span:nth-child(2) {
-    transform: rotate(-45deg) translate(-8px, 5px);
+    transform: rotate(-45deg) translate(-10px, 6px);
   }
   
   .button-menu.close span:nth-child(3) {

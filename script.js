@@ -14,8 +14,7 @@ toggleButton.addEventListener("click", () => {
 });
 
 /* 
-  Cuándo se haga click fuera del contenedor de enlaces 
-  el menú debe esconderse.
+  Cuándo se haga click fuera del contenedor se esconderse.
 */
 
 navWrapper.addEventListener("click", e => {
