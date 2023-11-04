@@ -1,0 +1,367 @@
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Urbanist', sans-serif;
+font-family: 'Young Serif', serif;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(240, 255, 128);
+
+}
+
+/* Estos fueron algunos de los cambios en la nav para poder hacerlo reponsive 
+y que funciones la burger al achicarse */
+/* .main-header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(240, 255, 128);
+  padding: 0 0.4rem;
+} */
+
+nav {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(240, 255, 128);
+  /* padding: 0 0.4rem; */
+  position:fixed;
+  top: 0;
+  transition: top 0.3s; 
+  /*left: 0;
+  height: 100vh;
+  width: 100%;
+   margin-left: 100%; 
+   transition: all 0.2s linear; 
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100; */
+}
+
+.nav-opciones > a {
+  /* background-color: rgb(240, 255, 128); */
+  display: inline-block;
+  padding: 20px;
+  color: #444444;
+  text-decoration: none;
+  font-weight: bold;
+  /* flex-direction: column; */
+  /* width: 70%;
+  height: 100%; */
+  /* align-items: center; */
+  /* justify-content: flex-start; */
+}
+a::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  text-decoration-color: none;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: 0.3s ease all;
+}
+.opciones:hover{
+  color:#8A8541;
+  
+}
+
+.opciones:hover::after {
+  width: 100%;
+  
+}
+.logo> a >img {
+  vertical-align: top;
+  /* width: 40px; */
+  height: 40px;
+  /* margin-left: 20px; */
+}
+
+.main-nav.hidden {
+  margin-left: -100px;
+}
+
+.main-nav.show {
+  margin-left: 0;
+}
+
+
+
+/* .opciones {
+  margin-top: 2rem;
+  color: #444444;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+} */
+
+
+
+.button-menu {
+  z-index: 200;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  background: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-menu span {
+  width: 37px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #444444;
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: all 0.2s linear;
+}
+
+.button-menu.close span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+  background: rgb(240, 255, 128);
+}
+
+.button-menu.close span:nth-child(2) {
+  transform: rotate(-45deg) translate(-10px, 6px);
+}
+
+.button-menu.close span:nth-child(3) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+
+  .main-logo {
+    flex-basis: 30%;
+  }
+
+  .main-nav {
+    position: static;
+    margin-left: 0;
+    flex-basis: 70%;
+    height: 100%;
+  }
+
+  .nav-opciones {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    background: rgb(240, 255, 128);
+  }
+
+  .opciones {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 2rem;
+  }
+}
+
+
+
+.carrusel {
+  background-image: url("/img/foto1.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+
+
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  height: 100vh;
+  text-align: left;
+  padding: 20px;
+  z-index: 2;
+}
+
+.titulo {
+
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 80px;
+  color: #FFFFFF;
+}
+.subtitulo{
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.contenido p {
+  color: #FFFFFF
+}
+
+/* reposive para el cuerpo de la pagina sobre todo la foto pricipal */
+@media(max-width: 768px) {
+  .carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenido {
+    height: 100vh;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 15%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contenido,
+  p {
+    padding-bottom: 20px;
+  }
+
+  .titulo {
+    font-size: 25px;
+    padding-bottom: 15px;
+  }
+}
+
+.card {
+  margin: 10px 35% 10px;
+}
+
+/* .fotoDetallada {
+    height: 200px;
+    margin:50px 30px 10px;
+    padding: 5%;
+    background-color: #337141;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.imagendetallada {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+
+.contenido1 {
+    margin-left: 80px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Young Serif', serif;
+} */
+
+.formulario {
+  background-color: #F3D424;
+  width: 300px;
+  height: 300px;
+  margin: 40px 35%;
+  padding: 20px 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.etiquetasFormulario {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-outline-success {
+  width: 250px;
+  padding: 5px;
+}
+
+/* Reponsive para el formulario */
+@media(max-width: 768px) {
+  .formulario {
+    margin: 40px 15%;
+  }
+
+  .card {
+    margin: 40px 15%;
+  }
+
+}
+
+#whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#whatsapp-icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  background-color: #25d366;
+  /* Color de fondo de WhatsApp */
+  padding: 0;
+  border-radius: 50%;
+  /* Para darle forma de círculo */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  /* Sombra */
+}
+
+#whatsapp-icon img {
+  padding-top: 15px;
+  width: 100%;
+  height: auto;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redes-sociales a {
+  margin: 5px;
+}
+
+.tituloFotter {
+  margin: 5px;
+}

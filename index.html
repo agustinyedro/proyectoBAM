@@ -12,46 +12,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Young+Serif&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Young+Serif&display=swap"
       rel="stylesheet"
     />
-    <link rel=" stylesheet" href="./styles.css" />
+    <!-- <link rel=" stylesheet" href="./styles.css" /> -->
+
     <title>Ayün Cabañas</title>
+    <link rel=" stylesheet" href="/css/styles.css" />
   </head>
 
   <body>
     <!--Barra de Navegacion-->
-      <header class="main-header">
-        <a class="main-logo" href="index.html"><img class="logo" src="img/Recurso 1.png" alt=""></a>
-        <nav id="nav" class="main-nav">
-          <div class="nav-opciones">
-            <a class="opciones" href="#">INICIO</a>
-            <a class="opciones" href="#">CONTACTO</a>
-            <a class="opciones" href="#">SOBRE NOSOTROS</a>
-          </div>
-        </nav>
-        <button id="button-menu" class="button-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </header>
+    <header class="main-header">
+      <nav id="nav" class="main-nav">
+        <div class="logo">
+          <a class="main-logo" href="index.html"
+            ><img  src="img/Recurso 1.png" alt=""
+          /></a>
+        </div>
+        <div class="nav-opciones">
+          <a class="opciones" href="index.html">INICIO</a>
+          <a class="opciones" href="/paginas/contacto.html">CONTACTO</a>
+          <a class="opciones" href="/paginas/sobreNosotros.html"
+            >SOBRE NOSOTROS</a
+          >
+        </div>
+      </nav>
+      <button id="button-menu" class="button-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
     <!--Cuerpo Principal de la pagina-->
-    <div class="carrusel">
+    <section class="carrusel">
       <div class="contenido">
-        <h1 class="titulo">Conoce nuestras cabañas</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-          quibusdam nesciunt enim provident doloremque numquam saepe culpa
-          veritatis totam voluptas, aliquam ab minus adipisci atque. Quam nihil
-          ea laborum minima.
+        <h1 class="titulo">Tu refugio en <br />las montañas</h1>
+        <p class="subtitulo">
+          Descubre la tranquilidad <br />
+          de Traslasierras <br />
+          en nuestras cabañas
         </p>
       </div>
-    </div>
+    </section>
+    <section id="caracteristicas">
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
     <!-- Elemento de Boostrap Card -->
     <div class="card" style="width: 18rem">
       <img
-        src="/img/cabañafrente.jpg"
+        src="./img/cabañafrente.jpg"
         class="card-img-top"
         alt="foto de la cabaña"
       />
@@ -109,7 +123,7 @@
       </div>
       <h6 class="tituloFotter">Ayün Cabañas</h6>
     </footer>
-    <script src="script.js"></script>
+    <script src="/script/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
