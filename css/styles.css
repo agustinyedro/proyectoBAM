@@ -210,6 +210,10 @@ body {
 .contenido p {
   color: #FFFFFF
 }
+.boton-carrusel{
+  background-color: #F3D424;
+  border-radius: 50px;
+}
 
 /* reposive para el cuerpo de la pagina sobre todo la foto pricipal */
 @media(max-width: 768px) {
