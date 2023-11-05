@@ -170,7 +170,7 @@ body {
 
 
 .carrusel {
-  background-image: url('/img/foto1.jpg');
+  background-image: url('../img/foto1.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
