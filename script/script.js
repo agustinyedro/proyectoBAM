@@ -1,36 +1,36 @@
-// //  seleccionamos los dos elementos que serán clickables
+ //  seleccionamos los dos elementos que serán clickables
 
-// const toggleButton = document.getElementById("button-menu");
-// const navWrapper = document.getElementById("nav");
+ const botonBurger = document.getElementById("button-menu");
+ const nuevaNav = document.getElementById("nav");
 
-// /* 
-//   cada ves que se haga click en el botón 
-//   agrega y quita las clases necesarias 
-//   para que el menú se muestre.
-// */
-// toggleButton.addEventListener("click", () => {
-//   toggleButton.classList.toggle("close");
-//   navWrapper.classList.toggle("show");
-// });
+ /* 
+   cada ves que se haga click en el botón 
+   agrega y quita las clases necesarias 
+   para que el menú se muestre.
+ */
+ botonBurger.addEventListener("click", () => {
+   botonBurger.classList.toggle("close");
+   nuevaNav.classList.toggle("show");
+ });
 
 /* 
   Cuándo se haga click fuera del contenedor se esconderse.
 */
 
-navWrapper.addEventListener("click", e => {
+nuevaNav.addEventListener("click", e => {
   if (e.target.id === "nav") {
-    navWrapper.classList.remove("show");
-    toggleButton.classList.remove("close");
+    nuevaNav.classList.remove("show");
+    botonBurger.classList.remove("close");
   }
 });
 
-let prevScrollPos = window.pageYOffset;
+let posAnterior = window.pageYOffset;
 
 window.addEventListener('scroll', function() {
-  var navbar = document.querySelector('.main-nav');
-  var currentScrollPos = window.pageYOffset;
+  var navbar = document.querySelector('.main-header');
+  var posActual = window.pageYOffset;
 
-  if (prevScrollPos > currentScrollPos) {
+  if (posAnterior > posActual) {
     // El usuario está desplazándose hacia arriba, muestra la barra de navegación
     navbar.classList.remove('hidden');
   } else {
@@ -38,7 +38,7 @@ window.addEventListener('scroll', function() {
     navbar.classList.add('hidden');
   }
 
-  prevScrollPos = currentScrollPos;
+  posAnterior = posActual;
 });
 
 // document.getElementById("whatsapp-icon").addEventListener("click", function() {

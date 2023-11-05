@@ -16,55 +16,69 @@ body {
 
 }
 
-/* Estos fueron algunos de los cambios en la nav para poder hacerlo reponsive 
-y que funciones la burger al achicarse */
-/* .main-header {
+.main-header {
+  position: fixed;
+  width: 100%;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(240, 255, 128);
   padding: 0 0.4rem;
-} */
-
-nav {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(240, 255, 128);
-  /* padding: 0 0.4rem; */
-  position:fixed;
-  top: 0;
-  transition: top 0.3s; 
-  /*left: 0;
-  height: 100vh;
-  width: 100%;
-   margin-left: 100%; 
-   transition: all 0.2s linear; 
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 100; */
+  margin-top: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+.main-header.hidden {
+  /* transition: all 0.2s linear; */
+  margin-top:-100%;
 }
 
-.nav-opciones > a {
-  /* background-color: rgb(240, 255, 128); */
-  display: inline-block;
-  padding: 20px;
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  margin-left: -100%;
+  transition: all 0.2s linear;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+
+.main-nav.show {
+  margin-left: 0;
+}
+
+.nav-opciones {
+  background-color: rgb(240, 255, 128);
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.opciones {
+  margin-top: 2rem;
   color: #444444;
   text-decoration: none;
   font-weight: bold;
-  /* flex-direction: column; */
-  /* width: 70%;
-  height: 100%; */
-  /* align-items: center; */
-  /* justify-content: flex-start; */
+  position: relative;
 }
-a::after {
-  position: absolute;
+
+.opciones::after {
   content: "";
+  position: absolute;
   background-color: white;
-  text-decoration-color: none;
   bottom: -5px;
   left: 0;
   width: 0%;
@@ -73,39 +87,11 @@ a::after {
 }
 .opciones:hover{
   color:#8A8541;
-  
 }
 
 .opciones:hover::after {
   width: 100%;
-  
 }
-.logo> a >img {
-  vertical-align: top;
-  /* width: 40px; */
-  height: 40px;
-  /* margin-left: 20px; */
-}
-
-.main-nav.hidden {
-  margin-left: -100px;
-}
-
-.main-nav.show {
-  margin-left: 0;
-}
-
-
-
-/* .opciones {
-  margin-top: 2rem;
-  color: #444444;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-} */
-
-
 
 .button-menu {
   z-index: 200;
@@ -155,12 +141,14 @@ a::after {
   }
 
   .main-nav {
-    position: static;
+    position: relative;
     margin-left: 0;
     flex-basis: 70%;
+    margin-left: 30%;
+    width: 70%;
     height: 100%;
   }
-
+  
   .nav-opciones {
     width: 100%;
     flex-direction: row;
@@ -174,8 +162,10 @@ a::after {
     display: inline-block;
     margin-top: 0;
     margin-right: 2rem;
+    
   }
 }
+
 
 
 
@@ -207,9 +197,11 @@ a::after {
   margin-bottom: 10px;
   font-family: 'Poppins', sans-serif;
   font-size: 80px;
-  color: #FFFFFF;
+  font-weight: 700;
+  color: #E3E3E3;
 }
-.subtitulo{
+
+.subtitulo {
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
   color: #FFFFFF;
