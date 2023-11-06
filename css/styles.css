@@ -166,9 +166,7 @@ body {
   }
 }
 
-
-
-
+/* imagen fe fondo vista principal al iniciar*/
 .carrusel {
   background-image: url("../img/foto1.jpg");
   background-size: cover;
@@ -191,19 +189,18 @@ body {
   padding: 20px;
   z-index: 2;
 }
-
 .titulo {
 
   margin-bottom: 10px;
   font-family: 'Poppins', sans-serif;
-  font-size: 80px;
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 600;
   color: #E3E3E3;
 }
 
 .subtitulo {
   font-family: 'Poppins', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: #FFFFFF;
 }
 
@@ -212,11 +209,22 @@ body {
 }
 .boton-carrusel{
   background-color: #F3D424;
+  width: 33px;
+  padding: 5px;
+  text-decoration: none;
   border-radius: 50px;
+  border: none;
+  color: #FFFFFF;
+  box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: width 1s ease-in-out;
+}
+.boton-carrusel:hover{
+  width: 80px;
+  padding: 5px;
 }
 
 /* reposive para el cuerpo de la pagina sobre todo la foto pricipal */
-@media(max-width: 768px) {
+@media(min-width: 768px) {
   .carrusel {
     display: flex;
     justify-content: center;
@@ -242,6 +250,29 @@ body {
     font-size: 25px;
     padding-bottom: 15px;
   }
+}
+
+/* caracteristicas */
+.caracter{
+  background-color: #8A8541 ;
+  display: flex;
+  
+  align-items:center;
+}
+
+.titulo-caracteristicas{
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  color: #E3E3E3;
+}
+.punto-caracteristicas{
+  font-family: 'Poppins', sans-serif;
+  font-size: 150px;
+  font-weight: 600;
+  color: #E3E3E3;
 }
 
 .card {
