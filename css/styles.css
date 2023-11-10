@@ -258,6 +258,9 @@ body {
 .caracteristicas {
   padding-bottom: 20px;
   background-color: #FCD469;
+  /* display: flex;
+  justify-content: space-between; */
+  /* align-items: start; */
 }
 
 .titulo-caracteristicas {
@@ -288,15 +291,16 @@ body {
 
 .card-caracter {
   background: linear-gradient(to bottom left, #efefee, #fcd46b);
-  width: 95%;
-  height: 400px;
+  width: 75%;
+  height: 300px;
   display: flex;
   /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
-  margin: 15px 15px 15px 30px;
+  margin: 15px 15px 50px 30px;
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  
 
 }
 
@@ -343,7 +347,6 @@ body {
   padding: 20px;
   font-size: 20px;
 }
-
 
 
 /*Diseño responsive sobre caracteristicas*/
