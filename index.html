@@ -9,6 +9,10 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +34,8 @@
       <nav id="nav" class="main-nav">
         <div class="nav-opciones">
           <a class="opciones" href="index.html">INICIO</a>
-          <a class="opciones" href="#caracteristicas">CONTACTO</a>
+          <a class="opciones" href="#contactos">CONTACTO</a>
+          <a class="opciones" href0="#caracteristicas">CARACTERITICAS</a>
           <a class="opciones" href="#">SOBRE NOSOTROS</a>
         </div>
       </nav>
@@ -53,33 +58,48 @@
       </div>
     </section>
     <section id="caracteristicas" class="caracteristicas">
-      <div>
+      
         <div class="titulo-caracter">
-          <h3 class="titulo-caracteristicas">Caracteriticas</h3>
+          <h3 class="titulo-caracteristicas">Caracteristicas</h3>
           <span class="punto-caracteristicas"></span>
         </div>
         <div class="card-caracter">
           <img src="/img/cabañafrente.jpg" alt="foto" />
           <div class="card-caracter-contenido">
             <h5 class="card-titulo">Cabañas Alpinas</h5>
-            <p>Nuestras cabañas ofrecen una combinación única de belleza natural, tranquilidad, autenticidad y comodidad, lo que las convierte en una elección ideal para aquellos que buscan una experiencia especial en la montaña.</p>
+            <p>
+              Nuestras cabañas ofrecen una combinación única de belleza natural,
+              tranquilidad, autenticidad y comodidad, lo que las convierte en
+              una elección ideal para aquellos que buscan una experiencia
+              especial en la montaña.
+            </p>
           </div>
         </div>
         <div class="card-caracter2">
           <img src="/img/pileta.jpg" alt="foto" />
           <div class="card-caracter-contenido">
             <h5 class="card-titulo">Cabañas Alpinas</h5>
-            <p>Nuestras cabañas ofrecen una combinación única de belleza natural, tranquilidad, autenticidad y comodidad, lo que las convierte en una elección ideal para aquellos que buscan una experiencia especial en la montaña.</p>
+            <p>
+              Nuestras cabañas ofrecen una combinación única de belleza natural,
+              tranquilidad, autenticidad y comodidad, lo que las convierte en
+              una elección ideal para aquellos que buscan una experiencia
+              especial en la montaña.
+            </p>
           </div>
         </div>
         <div class="card-caracter">
           <img src="/img/interior4.jpg" alt="foto" />
           <div class="card-caracter-contenido">
             <h5 class="card-titulo">Cabañas Alpinas</h5>
-            <p>Nuestras cabañas ofrecen una combinación única de belleza natural, tranquilidad, autenticidad y comodidad, lo que las convierte en una elección ideal para aquellos que buscan una experiencia especial en la montaña.</p>
+            <p>
+              Nuestras cabañas ofrecen una combinación única de belleza natural,
+              tranquilidad, autenticidad y comodidad, lo que las convierte en
+              una elección ideal para aquellos que buscan una experiencia
+              especial en la montaña.
+            </p>
           </div>
         </div>
-      </div>
+      
     </section>
     <!-- Elemento de Boostrap Card -->
     <!-- <div class="card" style="width: 18rem">
@@ -102,39 +122,40 @@
         <span class="punto-caracteristicas2"></span>
       </div>
       <div class="galeria-fotos">
-        <img src="./img/Interior.jpg" alt="1">
-        <img src="./img/Interior2.jpg" alt="2">
-        <img src="./img/Interior3.jpg" alt="3">
-        <img src="./img/interior4.jpg" alt="4">
-        <img src="./img/fotos fuera.jpg" alt="5">
-        <img src="./img/Interior2.jpg" alt="6">
+        <img src="./img/Interior.jpg" alt="1" />
+        <img src="./img/Interior2.jpg" alt="2" />
+        <img src="./img/Interior3.jpg" alt="3" />
+        <img src="./img/interior4.jpg" alt="4" />
+        <img src="./img/fotos fuera.jpg" alt="5" />
+        <img src="./img/Interior2.jpg" alt="6" />
       </div>
     </section>
+    <!-- seccion de datos y formas de contactos -->
     <section id="contactos">
-      <div class="iconos-cotactactos">
+      <div class="iconos-contactos">
         <div class="fondo-imagen">
-          <img src="" alt="">
+          <span class="material-symbols-outlined"> map </span>
         </div>
         <p class="preguntas"></p>
         <p class="respuestas"></p>
       </div>
-      <div class="iconos-cotactactos">
+      <div class="iconos-contactos">
         <div class="fondo-imagen">
-          <img src="" alt="">
+          <span class="material-symbols-outlined"> smartphone </span>
         </div>
         <p class="preguntas"></p>
         <p class="respuestas"></p>
       </div>
-      <div class="iconos-cotactactos">
+      <div class="iconos-contactos">
         <div class="fondo-imagen">
-          <img src="" alt="">
+          <button id="iconos-contactos-boton" class="iconos-contactos-boton"><span class="material-symbols-outlined"> chat </span></button>
         </div>
         <p class="preguntas"></p>
         <p class="respuestas"></p>
       </div>
     </section>
     <!--Formulario de contacto-->
-    <div class="formulario">
+    <div id="formulario" class="formulario">
       <form action="">
         <div class="campo-formulario">
           <label class="etiquetasFormulario" for="nombre">Nombre:</label>

@@ -258,14 +258,18 @@ body {
 .caracteristicas {
   padding-bottom: 20px;
   background-color: #FCD469;
-  /* display: flex;
-  justify-content: space-between; */
-  /* align-items: start; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;  */
+  align-items: center;
 }
 
-.titulo-caracteristicas {
+ .titulo-caracteristicas {
+  display: flex; 
+  justify-content: initial; 
+  align-items: initial; 
   margin-bottom: 10px;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   font-family: 'Poppins', sans-serif;
   font-size: 100px;
   font-weight: 600;
@@ -275,7 +279,7 @@ body {
 
 .punto-caracteristicas {
   margin-top: 67px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -297,23 +301,23 @@ body {
   /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
-  margin: 15px 15px 50px 30px;
+  margin: 50px 0;
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  
+
 
 }
 
 .card-caracter2 {
   background: linear-gradient(to top left, #fcd46b, #efefee);
-  width: 95%;
-  height: 400px;
+  width: 75%;
+  height: 300px;
   display: flex;
   flex-direction: row-reverse;
   /* flex-wrap: wrap-reverse; */
   justify-content: space-between;
   align-items: center;
-  margin: 15px 15px 15px 30px;
+  margin: 50px 0;
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 
@@ -336,11 +340,16 @@ body {
   font-size: 45px;
 }
 
-.card-caracter>img, .card-caracter2>img {
+.card-caracter>img {
   width: auto;
   height: 100%;
   border-radius: 10px 0 0 10px;
 
+}
+.card-caracter2>img{
+  width: auto;
+  height: 100%;
+  border-radius:  0 10px 10px 0 ;
 }
 
 .card-caracter>p , .card-caracter2>p {
@@ -425,7 +434,7 @@ body {
 .punto-caracteristicas2 {
   margin-top: 67px;
   margin-left: 5px;
-  
+
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -447,19 +456,67 @@ body {
 }
 .galeria-fotos {
   display: grid;
-  grid-template-rows: repeat(3, 1fr); /* Tres filas de igual altura */
-  grid-template-columns: repeat(3, 1fr); /* Dos columnas de igual anchura */
-  /* gap: 5px; */
+  grid-template-rows: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+  
 }
 .galeria-fotos >img{
   background-color: #FFFFFF;
   /* margin: 10px; */
-  padding: 10px;
-  width: 400px;
-  height: auto;
+  
+  width: 350px; /* Tamaño deseado */
+  height: 250px; /* Tamaño deseado */
+  object-fit: cover; 
+  object-position: center; 
+  padding: 5px;
+  display: block;
+  margin: auto;
+  transition: transform 0.3s; 
+}
+.galeria-fotos >img:hover{
+  background-color: #FFFFFF;
+  /* margin: 10px; */
+  
+  transform: scale(1.2);
+  padding: 5px;
+  
 }
 
-.formulario {
+#contactos{
+  height: 100vh;
+  background-color: #25d366;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.iconos-contactos{
+  padding: 50px 30px 100px 30px;
+  background-color: #25d366;
+  border-radius: 10px;
+  box-shadow:3px 3px 10px rgba(90, 226, 140, 0.3) ;
+}
+.fondo-imagen{
+  padding: 20px;
+  border: 2px solid #FFFFFF;
+  border-radius: 65px;
+}
+ /*iconos de Google*/
+.material-symbols-outlined {
+  font-size: 3em;
+  color: #ffffff;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.formulario{
+ display: none; 
+}
+
+.formulario.mostrar {
   background-color: #F3D424;
   width: 300px;
   height: 300px;
