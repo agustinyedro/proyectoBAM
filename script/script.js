@@ -41,21 +41,48 @@ window.addEventListener("scroll", function () {
   posAnterior = posActual;
 });
 
+//Boton del Formulario o contacto
 
-const botonMap = document.getElementById("iconos-contactos-boton");
+const botonForm = document.getElementById("iconos-contactos-boton");
 const formulario = document.getElementById("formulario");
 
-if (botonMap && formulario) {
-  botonMap.addEventListener("click", e => {
+if (botonForm && formulario) {
+  botonForm.addEventListener("click", e => {
     e.preventDefault(); 
       formulario.classList.toggle("mostrar");
-      botonMap.classList.toggle("mostrar");
+      botonForm.classList.toggle("mostrar");
       formulario.scrollIntoView({
         behavior: 'smooth', // Puedes cambiar 'smooth' por 'auto' para un scroll instantáneo
         block: 'start' // Puedes cambiar 'start' por 'end' o 'center' según tu preferencia
       });
   });
 }
+
+//Boton del mapa
+const botonMap = document.getElementById("iconos-mapa-boton");
+const mapContainer = document.getElementById("map-container");
+let iframe = null;
+
+if (botonMap && mapContainer) {
+  botonMap.addEventListener("click", () => {
+    if (iframe) {
+      mapContainer.removeChild(iframe);
+      iframe = null;
+    } else {
+      iframe = document.createElement("iframe");
+      iframe.setAttribute("src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d216392.54721726847!2d-65.12426830606992!3d-32.0656364101082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2d93bccb3cc4b%3A0x85b91251624640fa!2sComplejo%20Ay%C3%BCn!5e0!3m2!1sen!2sar!4v1699709443834!5m2!1sen!2sar");
+      iframe.setAttribute("class", "map");
+      mapContainer.appendChild(iframe);
+
+      iframe.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+}
+
+
 
 // document.getElementById("whatsapp-icon").addEventListener("click", function() {
 
