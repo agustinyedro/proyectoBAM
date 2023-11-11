@@ -18,7 +18,7 @@ botonBurger.addEventListener("click", () => {
 */
 
 nuevaNav.addEventListener("click", (e) => {
-  if (e.target.id === "nav") {
+  if (e.target.id === "nav"||e.target.classList =="opciones") {
     nuevaNav.classList.remove("show");
     botonBurger.classList.remove("close");
   }
@@ -82,14 +82,16 @@ if (botonMap && mapContainer) {
   });
 }
 
+//Boton de whatsapp
+const botonWhatsapp = document.getElementById("iconos-whatsapp-boton");
 
 
-// document.getElementById("whatsapp-icon").addEventListener("click", function() {
+if (botonMap && mapContainer) {
+  botonWhatsapp.addEventListener("click", () => {
+    let phoneNumber = '+543516370576';
+    let message = 'Hola en que podemos ayudarte?';
+    let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, '_blank');
+  });
+}
 
-//   var phoneNumber = '+54351';
-//   var message = 'Hola en que podemos ayudarte?';
-
-//   var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-//   window.open(whatsappURL, '_blank');
-// });
