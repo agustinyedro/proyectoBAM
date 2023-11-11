@@ -494,8 +494,10 @@ body {
 }
 
 #contactos{
-  height: 80vh;
+  /* height: 80vh; */
   background-color: #25d366;
+}
+.contacto-flex{
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -513,7 +515,7 @@ body {
 
  /*iconos de Google*/
 .material-symbols-outlined {
-  font-size: 3em;
+  font-size: 2.5em;
   color: #ffffff;
   font-variation-settings:
   'FILL' 0,
@@ -522,24 +524,23 @@ body {
   'opsz' 48
 }
 
-.formulario{
- display: none;
-}
+
 .iconos-contactos-boton, .iconos-mapa-boton , .iconos-whatsapp-boton{
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #FFFFFF;
-  width: 100px;
-  height: 100px;
-  border-radius:65% ;
+  width: 80px;
+  height: 80px;
+  border-radius:50% ;
 }
 .preguntas{
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
-  color: #FFFFFF;
+  color: #232323;
+  font-weight: 500;
 }
 .respuestas{
   text-align: center;
-  color: #FFFFFF;
+  color: #232323;
 }
 
 @media (max-width: 768px) {
@@ -554,6 +555,9 @@ body {
   }
     
 }
+.formulario{
+  display: none;
+ }
 
 .formulario.mostrar {
   background-color: #F3D424;
