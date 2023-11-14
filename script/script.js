@@ -94,4 +94,25 @@ if (botonMap && mapContainer) {
     window.open(whatsappURL, '_blank');
   });
 }
+//Boton de descrubrirlo
+function irASeccion() {
+  // Usando JavaScript para desplazarse a la sección deseada
+  const seccionDeseada = document.getElementById("caracteristicas");
+  seccionDeseada.scrollIntoView({ behavior: "smooth" });
+}
+
+//Enviar Formulario 
+function enviarConsulta() {
+  // Obtener el formulario por su ID
+  var formulario = document.getElementById("mi-formulario");
+
+  // Validar el formulario antes de enviar
+  if (formulario.checkValidity()) {
+    // Enviar el formulario
+    formulario.submit();
+  } else {
+    // El formulario no es válido, realizar acciones adicionales si es necesario
+    alert("Por favor, complete todos los campos correctamente.");
+  }
+}
 
