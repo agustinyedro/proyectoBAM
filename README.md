@@ -10,6 +10,7 @@ Bienvenido a Cabañas Ayün, tu refugio en las montañas de Traslasierras, Córd
 - [Galería](#galería)
 - [Contacto](#contacto)
 - [Ubicación en el Mapa](#ubicación-en-el-mapa)
+- [Escribirá al WhatsApp](#enviar-whatsapp)
 - [Formulario de Contacto](#formulario-de-contacto)
 
 ## Descripción
@@ -37,7 +38,7 @@ Donde puedes realizar click en cada icono y te llevara a las diferente opciones,
 
 Consulta nuestra ubicación en el mapa para planificar tu visita a La Travesía, Traslasierras, Córdoba.
 
-##Enviar whatsapp
+## Enviar whatsapp
 
 te lleva a whatsapp directo al chat con nosotros
 
