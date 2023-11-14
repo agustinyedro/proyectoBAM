@@ -104,11 +104,14 @@ body {
 }
 
 .redes-sociales-nav {
+  text-decoration: none;
   margin: 30px;
 }
 
 .redes-sociales-nav>a {
   /* margin: 20px; */
+  text-decoration: none; 
+  color: inherit; 
   padding: 20px;
 }
 
