@@ -110,8 +110,8 @@ body {
 
 .redes-sociales-nav>a {
   /* margin: 20px; */
-  text-decoration: none; 
-  color: inherit; 
+  text-decoration: none;
+  color: inherit;
   padding: 20px;
 }
 
@@ -289,14 +289,16 @@ body {
   display: flex;
   justify-content: initial;
   align-items: initial;
-  margin-bottom: 10px;
-  padding-left: 10px;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
   font-family: 'Poppins', sans-serif;
   font-size: 100px;
   font-weight: 600;
   color: #FFFFFF;
   /* color: #D96900; */
+
 }
+
 
 .punto-caracteristicas {
   margin-top: 67px;
@@ -315,77 +317,57 @@ body {
 }
 
 .card-caracter {
-  background: linear-gradient(to bottom left, #efefee, #fcd46b);
+  background-color: #fff;
+  /* background: linear-gradient(to bottom left, #efefee, #fcd46b); */
   width: 75%;
-  height: 300px;
+  height: fit-content;
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
-  align-items: center;
   margin: 50px 0;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
+  img {
+    width: 45%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
 
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+
+    img {
+      object-fit: cover;
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  & .card-caracter-contenido {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-family: 'Overpass', sans-serif;
+    /* margin: 25px; */
+
+    & .card-titulo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #232323;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    & p {
+      font-size: .875rem;
+    }
+  }
 }
 
-.card-caracter2 {
-  background: linear-gradient(to top left, #fcd46b, #efefee);
-  width: 75%;
-  height: auto;
-  display: flex;
-  flex-direction: row-reverse;
-  /* flex-wrap: wrap-reverse; */
-  justify-content: space-between;
-  align-items: center;
-  margin: 50px 0;
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 
-}
 
-.card-caracter-contenido {
-  flex: 1;
-  /* Permite que crezca según sea necesario */
-  box-sizing: border-box;
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  font-family: 'Overpass', sans-serif;
-  /* margin: 25px; */
-}
-
-.card-titulo {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #232323;
-  padding: 15px 5px;
-  font-size: 35px;
-  text-align: center;
-}
-
-.card-caracter>img {
-  width: auto;
-  height: 100%;
-  border-radius: 10px 0 0 10px;
-
-}
-
-.card-caracter2>img {
-  flex: 1;
-  max-width: 45%;
-  /* height: 100%; */
-  border-radius: 0 10px 10px 0;
-}
-
-.card-caracter>p,
-.card-caracter2>p {
-  padding: 20px;
-  font-size: 20px;
-}
 
 
 /*Diseño responsive sobre caracteristicas*/
@@ -417,7 +399,7 @@ body {
 
   .card-caracter,
   .card-caracter2 {
-    height: auto;
+    height: fit-content;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -451,13 +433,15 @@ body {
     width: 100%;
     height: auto;
     border-radius: 10px 10px 0 0;
+    object-fit: cover;
   }
 
 
-  .card-caracter2>img {
-    max-width: 100%;
-    height: auto;
+  .card-caracter2 img {
+
+    height: 100%;
     border-radius: 10px 10px 0 0;
+    object-fit: contain;
   }
 
 
@@ -512,7 +496,7 @@ body {
 } */
 .historia>p {
   /* padding: 5%; */
-  
+
   font-family: 'Lora', serif;
   font-size: 18px;
   text-align: justify;
@@ -811,7 +795,8 @@ body {
   margin-bottom: 20px;
   font-family: 'Lora', serif;
 }
-.campo-formulario>textarea{
+
+.campo-formulario>textarea {
   width: 300px;
   height: 150px;
   resize: none;
@@ -833,7 +818,7 @@ body {
     margin: 40px 10%;
   }
 
-  
+
 
 }
 
