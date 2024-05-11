@@ -1,8 +1,8 @@
 window.addEventListener("scroll", function () {
   const $nav = document.getElementById("header");
-  if (window.scrollY > 0) {
+  if (window.scrollY > 120) {
     $nav.classList.add("nav-scroll");
-  } else {
+  } else if (this.window.scrollY < 49) {
     $nav.classList.remove("nav-scroll");
   }
 });
@@ -36,3 +36,14 @@ function previousImage() {
 
 document.querySelector(".btn-left").addEventListener("click", previousImage);
 document.querySelector(".btn-right").addEventListener("click", nextImage);
+
+window.addEventListener('scroll', function () {
+  var seccionFija = document.getElementById('caracteristicas');
+  var seccionFijaPos = seccionFija.offsetTop;
+
+  if (window.pageYOffset >= seccionFijaPos) {
+    seccionFija.classList.add('fixed');
+  } else {
+    seccionFija.classList.remove('fixed');
+  }
+});
