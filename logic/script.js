@@ -60,13 +60,13 @@ let seccionFijaPos2 = seccionFija2.offsetTop - 100;
 window.addEventListener("scroll", function () {
   let porcentaje = Math.round((seccionFijaPos2 / this.window.scrollY) * 100);
 
-  // console.log(porcentaje);
+  //console.log(porcentaje);
 
   // console.log(seccionFijaPos2 - this.window.scrollY);
   if (porcentaje < 134) {
     seccionFija2.style.width = porcentaje - 10 + "%";
     if (porcentaje < 114) {
-      seccionFija2.style.borderRadius = "2.5rem";
+      seccionFija2.style.borderRadius = "2rem";
       seccionFija2.classList.add("fixed");
     } else {
       seccionFija2.style.borderRadius = "0%";
@@ -84,22 +84,35 @@ window.addEventListener("scroll", function () {
 });
 
 let seccionFijaFooter = document.getElementById("footer");
+
+let seccionFijaFooter2 = document.getElementById("footer-bg");
+
+// console.log(seccionFijaFooter.offsetTop);
+
 let seccionFijaPosFooter = seccionFijaFooter.offsetTop;
 
+// console.log(seccionFijaPosFooter);
 
 window.addEventListener("scroll", function () {
-  let porcentajeFooter = Math.round((seccionFijaPosFooter / this.window.scrollY) * 100);
+  let porcentajeFooter = Math.round(
+    (seccionFijaPosFooter / this.window.scrollY) * 100
+  );
 
-  // console.log(porcentajeFooter);.
-  seccionFijaFooter.style.padding = `0 13.5vh`;
+  console.log(porcentajeFooter - 15);
 
   if (porcentajeFooter < 120) {
-    seccionFijaFooter.style.width = porcentajeFooter - 15 + "%";
-    seccionFijaFooter.style.padding = `0 ${porcentajeFooter - 103.5}vh`;
-    seccionFijaFooter.classList.add("scroll");
+    seccionFijaFooter2.style.width = porcentajeFooter - 15 + "%";
+    // seccionFijaFooter2.style.height = porcentajeFooter - 43 + "%";
+
+    if (porcentajeFooter < 116) {
+      seccionFijaFooter2.style.borderRadius = "2rem";
+      seccionFijaFooter2.classList.add("scrol");
+    } else {
+      seccionFijaFooter2.style.borderRadius = "0%";
+      seccionFijaFooter2.classList.remove("scroll");
+    }
+    seccionFijaFooter2.classList.add("scroll");
   } else {
-    seccionFijaFooter.classList.remove("scroll");
+    seccionFijaFooter2.classList.remove("scroll");
   }
-
-})
-
+});
