@@ -60,7 +60,7 @@ let seccionFijaPos2 = seccionFija2.offsetTop - 100;
 window.addEventListener("scroll", function () {
   let porcentaje = Math.round((seccionFijaPos2 / this.window.scrollY) * 100);
 
-  console.log(porcentaje);
+  // console.log(porcentaje);
 
   // console.log(seccionFijaPos2 - this.window.scrollY);
   if (porcentaje < 134) {
@@ -83,12 +83,23 @@ window.addEventListener("scroll", function () {
   }
 });
 
-fetch(window.location.href)
-  .then((response) => {
-    if (response.status === 404) {
-      window.location.href = "404.html";
-    }
-  })
-  .catch((error) => {
-    console.error("Error al obtener la respuesta:", error);
-  });
+let seccionFijaFooter = document.getElementById("footer");
+let seccionFijaPosFooter = seccionFijaFooter.offsetTop;
+
+
+window.addEventListener("scroll", function () {
+  let porcentajeFooter = Math.round((seccionFijaPosFooter / this.window.scrollY) * 100);
+
+  // console.log(porcentajeFooter);.
+  seccionFijaFooter.style.padding = `0 13.5vh`;
+
+  if (porcentajeFooter < 120) {
+    seccionFijaFooter.style.width = porcentajeFooter - 15 + "%";
+    seccionFijaFooter.style.padding = `0 ${porcentajeFooter - 103.5}vh`;
+    seccionFijaFooter.classList.add("scroll");
+  } else {
+    seccionFijaFooter.classList.remove("scroll");
+  }
+
+})
+
