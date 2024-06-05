@@ -1,3 +1,4 @@
 {
-    "java.configuration.runtimes": []
+    "java.configuration.runtimes": [],
+    "liveServer.settings.port": 5501
 }

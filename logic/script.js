@@ -85,7 +85,7 @@ window.addEventListener("scroll", function () {
 
 let seccionFijaFooter = document.getElementById("footer");
 
-let seccionFijaFooter2 = document.getElementById("footer-bg");
+// let seccionFijaFooter2 = document.getElementById("footer-bg");
 
 // console.log(seccionFijaFooter.offsetTop);
 
@@ -98,21 +98,21 @@ window.addEventListener("scroll", function () {
     (seccionFijaPosFooter / this.window.scrollY) * 100
   );
 
-  console.log(porcentajeFooter - 15);
+  // console.log(porcentajeFooter - 20);
 
   if (porcentajeFooter < 120) {
-    seccionFijaFooter2.style.width = porcentajeFooter - 15 + "%";
-    // seccionFijaFooter2.style.height = porcentajeFooter - 43 + "%";
+    seccionFijaFooter.style.width = porcentajeFooter - 15 + "%";
+    seccionFijaFooter.style.height = porcentajeFooter - 47 + "vh";
 
     if (porcentajeFooter < 116) {
-      seccionFijaFooter2.style.borderRadius = "2rem";
-      seccionFijaFooter2.classList.add("scrol");
+      seccionFijaFooter.style.borderRadius = "2rem";
+      seccionFijaFooter.classList.add("scroll");
     } else {
-      seccionFijaFooter2.style.borderRadius = "0%";
-      seccionFijaFooter2.classList.remove("scroll");
+      seccionFijaFooter.style.borderRadius = "0%";
+      seccionFijaFooter.classList.remove("scroll");
     }
-    seccionFijaFooter2.classList.add("scroll");
+    seccionFijaFooter.classList.add("scroll");
   } else {
-    seccionFijaFooter2.classList.remove("scroll");
+    seccionFijaFooter.classList.remove("scroll");
   }
 });
