@@ -62,12 +62,13 @@ header {
     }
 
     .nav {
-        width: 60vw;
+        width: 30vw;
 
         .nav-opciones {
             display: flex;
             justify-content: space-evenly;
-            font-size: 1.1rem;
+            font-size: 0.875rem;
+
 
             .opciones {
                 text-decoration: none;
@@ -329,9 +330,10 @@ header {
             left: 0;
             transform: translateY(-50%);
             background-color: #222222bb;
+            backdrop-filter: blur(5px);
             width: 2.3rem;
             height: 3.2rem;
-            border-radius: 0 50% 50% 0;
+            border-radius: 0 2rem 2rem 0;
             cursor: pointer;
 
             .caret {
@@ -369,9 +371,10 @@ header {
             right: 0;
             transform: translateY(-50%);
             background-color: #222222bb;
+            backdrop-filter: blur(5px);
             width: 2.3rem;
             height: 3.2rem;
-            border-radius: 50% 0 0 50%;
+            border-radius: 2rem 0 0 2rem;
             cursor: pointer;
 
             .caret {
@@ -622,7 +625,7 @@ header {
 
         .contenido {
             position: relative;
-            width: 45vh;
+            width: 20vw;
             height: 45vh;
             margin: 0 auto;
             cursor: pointer;
@@ -649,11 +652,10 @@ header {
                 img {
                     z-index: 50;
                     position: relative;
-                    width: 100%;
-                    height: 100%;
+                    width: 20vw;
+                    height: 45vh;
                     object-fit: cover;
                     border-radius: 2rem;
-
                 }
 
                 .btn-mas {
@@ -696,23 +698,31 @@ header {
                 padding: 1.5rem;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
+                gap: 1.2rem;
+
                 box-sizing: border-box;
+
+                .caracteristicas-titulo {
+                    font-size: 1.2rem;
+                }
+
+                .caracteristicas-detalles {
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    color: #757575;
+                }
 
                 .caracteristicas-linea {
                     display: flex;
-                    justify-content: flex-start;
                     align-items: center;
-                    margin-bottom: 0.5rem;
-                    gap: 1.5rem;
+                    justify-content: space-around;
 
                     span {
-                        width: 3rem;
                         font-weight: 600;
                         font-size: 1.2rem;
                         display: flex;
-                        justify-content: space-between;
                         align-items: center;
+                        gap: 0.5rem;
                         color: #757575;
 
                         img {
@@ -724,10 +734,11 @@ header {
         }
 
         .nombre-caracteristica {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-family: var(--primary-font);
             font-weight: 400;
             margin-top: 2vh;
+            margin-left: 1rem;
         }
     }
 }
