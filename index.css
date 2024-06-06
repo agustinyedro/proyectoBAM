@@ -594,13 +594,70 @@ header {
 
 .sobre-nosotros {
     height: 150vh;
-    background-color: #222222;
+    background-color: #010101;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     /* Aplica la animación */
 
     &.fixed {
         min-width: var(--ancho);
         margin: 0 auto;
+    }
+
+    img {
+        height: 100%;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .sobre-nosotros-titulo {
+        width: 60%;
+        position: absolute;
+        color: #f8f8f8;
+        top: 25vh;
+        font-size: 3.5rem;
+        font-family: var(--primary-font);
+        font-weight: 400;
+        margin-bottom: 3rem;
+        text-wrap: balance;
+        text-align: center;
+    }
+
+    .sobre-nosotros-descripcion {
+        width: 60%;
+        position: absolute;
+        color: #f8f8f8;
+        top: 48vh;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-wrap: balance;
+        text-align: center;
+    }
+
+    .sobre-nosotros-btn {
+        position: absolute;
+        top: 70vh;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 3rem;
+        border: none;
+        background-color: #f8f8f87e;
+        backdrop-filter: blur(5px);
+        color: #010101;
+        font-size: 1.2rem;
+        font-weight: 400;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f8f8f8;
+            box-shadow: 0 0 5px #f8f8f8;
+        }
     }
 }
 
@@ -626,7 +683,7 @@ header {
         .contenido {
             position: relative;
             width: 20vw;
-            height: 45vh;
+            height: 20vw;
             margin: 0 auto;
             cursor: pointer;
             border-radius: 2rem;
@@ -653,7 +710,7 @@ header {
                     z-index: 50;
                     position: relative;
                     width: 20vw;
-                    height: 45vh;
+                    height: 20vw;
                     object-fit: cover;
                     border-radius: 2rem;
                 }
@@ -747,6 +804,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    gap: 5rem;
     max-width: var(--ancho);
     margin: 20vh auto;
     position: relative;
@@ -774,6 +832,10 @@ header {
 
     .cards-comentarios {
         grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
         height: 100%;
 
         .card-comentario {
@@ -853,6 +915,88 @@ header {
                     }
                 }
             }
+
+        }
+    }
+}
+
+.galeria-imagenes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 15vh auto;
+    width: var(--ancho);
+
+
+    .galeria-contenido-titulo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.2rem;
+        width: var(--ancho);
+
+        .galeria-titulo {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--text-gray);
+        }
+
+        .ver-mas {
+            display: inline-block;
+            border-radius: 3rem;
+            text-decoration: none;
+            border: 1px solid var(--text-gray);
+            background-color: #ffffff;
+            font-size: 1.1rem;
+            padding: 0.875rem 1.875rem;
+            color: var(--text-gray);
+            margin: 2rem 0;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--blackHover);
+                color: var(--white);
+            }
+        }
+    }
+
+    .galeria-imagenes-contenido {
+        display: flex;
+        gap: 2rem;
+        width: var(--ancho);
+
+        .img-grande {
+            width: 40vw;
+            height: 65vh;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+        }
+
+        .img-pequenias {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 25vh;
+            height: 20vh;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+
+
+            img {
+                width: 25vh;
+                height: 20vh;
+                cursor: pointer;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+
+                border-radius: var(--border-radius);
+
+                &:hover {
+                    transform: scale(1.1);
+
+                }
+            }
+
 
         }
     }
