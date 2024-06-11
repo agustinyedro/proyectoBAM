@@ -1,22 +1,34 @@
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
+import express from 'express';
+import { join } from 'path';
+import { getDirname } from './utils.js';
 
 const app = express();
-const puerto = 3000;
+const PORT = process.env.PORT || 3000;
+const __dirname = getDirname(import.meta.url);
 
-app.use(express.static('src'));
+// Configurar la codificación UTF-8 para todas las respuestas
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages', 'index.html'));
-});
+// Importar rutas
+import indexRoute from './routes/index.js';
+import contactoRoute from './routes/contacto.js';
+import sobreNosotrosRoute from './routes/sobreNosotros.js';
+import imagenesRoute from './routes/imagenes.js';
 
+// Configurar directorio de archivos estáticos
+app.use(express.static(join(__dirname, 'public')));
+
+// Usar rutas
+app.use('/', indexRoute);
+app.use('/', contactoRoute);
+app.use('/', sobreNosotrosRoute);
+app.use('/images', imagenesRoute);
+
+// Manejar 404
 app.use((req, res) => {
-    res.status(404).sendFile(path.join(__dirname, 'pages', '404.html'));
+    res.status(404).sendFile(join(__dirname, 'views', '404.html'));
 });
 
-// Configurar el tipo MIME para los archivos CSS
-
-app.listen(puerto, () => {
-    console.log(`Servidor escuchando en http://localhost:${puerto}`);
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`);
 });
