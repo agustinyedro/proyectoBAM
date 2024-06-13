@@ -962,7 +962,7 @@ header {
 
     .galeria-imagenes-contenido {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: .5rem;
         width: var(--ancho);
         grid-auto-flow: dense;
@@ -973,6 +973,7 @@ header {
             border: 2px solid #ddd;
             border-radius: var(--border-radius);
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
 
             img {
                 width: 100%;
@@ -1070,7 +1071,7 @@ header {
     min-height: 60vh;
     max-width: 100vw;
     min-width: var(--ancho);
-
+    transition: all 0.3s ease;
 
     &.scroll {
 
