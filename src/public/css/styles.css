@@ -962,26 +962,42 @@ header {
 
     .galeria-imagenes-contenido {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         gap: .5rem;
         width: var(--ancho);
+        grid-auto-flow: dense;
 
-        .img-grande {
-            grid-column: span 2;
-            grid-row: span 2;
-            width: 100%;
-            height: 80%;
+        .imagen {
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #ddd;
             border-radius: var(--border-radius);
-            object-fit: cover;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            &.img-grande {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            &.img-mediana {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            &.img-pequenia {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
         }
 
-        .img-pequenia {
 
-            width: 80%;
-            height: 60%;
-            border-radius: var(--border-radius);
-        }
     }
 }
 
